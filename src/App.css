@@ -1,38 +1,507 @@
-.App {
-  text-align: center;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #4a4e69;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+}
+.image {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+}
+.navbar .visit-button {
+  padding: 10px 20px;
+  background-color: #533a63;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-style: groove;
+}
+
+/* Hide menu by default for mobile screens */
+.navbar .menu-icon {
+  display: none;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    display: none; /* Hide the menu */
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .navbar ul.active {
+    display: block; /* Show menu when active */
+  }
+
+  .navbar ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .navbar .visit-button {
+    display: block;
+    margin: 1rem auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4a4e69;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar ul {
+  display: flex;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.image {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+}
+*/
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Pushes the text to the right */
+  height: 100vh; /* Full viewport height */
+
+
+  padding: 0 50px; /* Adds padding to the sides */
+}
+
+.hero img {
+  background-image: url('./assests/images/pic1 (2).jpg');
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire section without stretching */
+  z-index: -1; /* Sends the image behind the text */
+}
+
+.label {
+  position: relative;
+  max-width: 40%; /* Ensures the text area is on the right and not too wide */
+  color: white;
+  text-align: left; /* Aligns the text to the left within the label */
+}
+
+.hero-text {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  font-family:jaini;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text shadow for better readability on image */
+}
+
+.visit-button {
+  padding: 12px 25px;
+  background-color: #7662a8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .label {
+    max-width: 60%; /* Allow more space for the text on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-text {
+    font-size: 2rem; /* Adjust font size for smaller screens */
   }
+}
+
+@media (max-width: 480px) {
+  .label {
+    max-width: 80%; /* Even more space for the text on smaller screens */
+  }
+
+  .hero-text {
+    font-size: 1.6rem;
+  }
+
+  .visit-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* How It Works section styles */
+.how-it-works {
+background-color: #bfb5da;
+margin-top: 10px;
+margin-bottom: 10px;
+  padding: 40px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.how-it-works h2 {
+  font-size: 36px;
+  color: #3f1a50;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.step {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.step img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-color: #817f9e;
+  border-radius: 25px;
+  
+}
+
+.step h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 16px;
+  color: #555;
+  text-align: justify;
+}
+
+
+/* Why Choose Us section */
+.why-choose-us {
+  background-color: #9892aa;
+  padding: 40px;
+}
+
+.why-choose-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centers the heading vertically */
+}
+
+.left-content h2 {
+  font-size: 30px;
+  color: #1e1422;
+  text-align: center; /* Center aligns the text within the left section */
+}
+
+.right-content {
+  flex: 2;
+  
+}
+
+.right-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-content ul li {
+  margin-bottom: 14px;
+  margin-left: 90px;
+  font-size: 18px;
+  color: #262632;
+}
+
+/* Optional: For responsive design */
+@media (max-width: 768px) {
+  .why-choose-us-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-content,
+  .right-content {
+    margin-bottom: 20px;
+  }
+
+  .left-content h2 {
+    text-align: center;
+  }
+}
+
+
+/* Footer 
+.footer {
+  background-color: #4a4e69;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.nav section{
+  margin-bottom: 14px;
+  margin-left: 90px;
+ 
+ 
+
+}
+.contact-form {
+  width: 40%;
+  background-color: #817f9e;
+ 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact-form {
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #823434;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-info {
+ width: 20%;
+ text-align: center;
+}
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+.contact-section{
+  width: 20%;
+ 
+}
+.contact-section ul{
+  list-style: none;
+
+}
+.contact-section ul li { 
+ margin-bottom: 30px;
+ color: #ddd;
+}*/
+
+/* General Footer Styling */
+.footer {
+  background-color: #4a4e69;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer .contact-form,
+.footer .contact-section,
+.footer .contact-info {
+  width: 20%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer h3, .footer h2 {
+  color: #c4b7e5;
+ 
+}
+
+.footer input, .footer textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer button {
+  padding: 0.7rem 1.5rem;
+  background-color: #25172e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: #f0f4f8;
+  border-style: groove;
+  
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 0.5rem 0;
+  margin-bottom: 30px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .image {
+  height: 65px;
+  width: 65px;
+}
+
+/* Responsive Footer - Mobile View */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer .contact-form,
+  .footer .contact-section,
+  .footer .contact-info {
+    width: 100%;
+  }
+
+  .footer .contact-form {
+    margin-bottom: 1rem;
+  }
+
+  .footer ul li {
+    margin: 1rem 0;
+  }
+}
+
+/* Box section styles */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfb5da; /* You can change this color */
+  padding: 20px;
+  margin-top: 10px;
+ 
+  margin-bottom: 10px; /* To place it right below the navbar */
+}
+
+.box-content {
+  font-family: Copperplate Gothic Light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Optional, to limit the width */
+  padding: 10px 20px;
+}
+
+.box-text h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.visit-button {
+  padding: 10px 20px;
+  background-color: #533a63;
+  color: white;
+  border: #bfb5da;
+  border-radius: 10px;
+  cursor: pointer;
+  border-style: groove;
+  
+}
+
+.visit-button:hover {
+  background-color: #87a4c4;
 }

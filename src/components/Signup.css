@@ -1,0 +1,66 @@
+/* src/components/Signup.css */
+.signup {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #baabcd;
+  }
+  
+  .signup h2 {
+    text-align: center;
+  }
+  
+  .user-type-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #6f88b8;
+  }
+  
+  .user-type-toggle button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6c86b8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .user-type-toggle .doctor{
+    background-color: #222c42;
+    color: rgb(30, 45, 72);
+  }
+  .user-type-toggle .active {
+    background-color: #423d6f;
+    color:rgb(255, 255, 255);
+  }
+  
+  .signup form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6f88b8;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signup button:hover {
+    background-color: #1e3465;
+  }
+  

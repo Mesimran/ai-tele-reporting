@@ -1,0 +1,64 @@
+/* src/components/Login.css */
+.login {
+    max-width: 400px;
+    margin:  auto;
+    padding: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #d8c7e7;
+  }
+  
+  .login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e1558;
+  }
+  
+  .user-type-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .user-type-toggle button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #8560bc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(122, 66, 144);
+  }
+  
+  .user-type-toggle .active {
+    background-color: #2268b2;
+    color: white;
+  }
+  
+  .login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #84a6ca;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .login button:hover {
+    background-color:  #2268b2;
+  }
+  
